@@ -94,13 +94,13 @@ const Contact = () => {
               <>
                 <InputGroup
                   label="Email"
-                  value={email}
+                  // value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <InputGroup
                   label="Password"
                   type="password"
-                  value={password}
+                  // value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
 

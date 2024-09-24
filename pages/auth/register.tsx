@@ -90,37 +90,37 @@ const Contact = () => {
             <InputGroup
               label="Nama kamu"
               placeholder="contoh Sujatmiko Arufuru"
-              value={email}
+              // value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <InputGroup
               label="Nomer WhatsApp"
               placeholder="contoh 628123456789"
-              defaultValue={email}
+              // defaultValue={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <InputGroup
               label="Email"
               placeholder="contoh Sujatmiko@gmail.com"
-              defaultValue={email}
+              // defaultValue={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <InputGroup
               label="Password"
-              type="password"
-              defaultValue={password}
+              // type="password"
+              // defaultValue={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <InputGroup
               label="Ulangi Password"
-              type="password"
-              defaultValue={password}
+              // type="password"
+              // defaultValue={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <TextAreaGroup
               label="Alamat"
               placeholder="contoh Kampung durian runtuh jl.InAjaDulu 21, Jakarta Selatan"
-              defaultValue={email}
+              // defaultValue={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             {error && <p className="text-red-500">{error}</p>}
