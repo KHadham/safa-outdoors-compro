@@ -10,7 +10,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <PageTemplate title="About - Collosal">
+    <PageTemplate title="About - Safa-Outdoor">
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
         <aside className="w-full" data-aos="fade-down-right">
           <div className="w-full h-[480px] relative">
@@ -31,7 +31,7 @@ const About = () => {
           <PageSentence
             badge="ABOUT"
             title="We are creative, smart and hardworking people"
-            description={`Several creative people gather in the same place - that's Collosal. We collaborate to produce the best results, loved by clients and comfortable for users. Here we maintain togetherness even though with different backgrounds, all the people here are already experts in their respective fields.`}
+            description={`Several creative people gather in the same place - that's Safa-Outdoor. We collaborate to produce the best results, loved by clients and comfortable for users. Here we maintain togetherness even though with different backgrounds, all the people here are already experts in their respective fields.`}
           />
         </aside>
       </section>
@@ -63,7 +63,7 @@ const About = () => {
             title="Meet the team! All creative people are here"
           />
         </div>
-        <div className="w-full grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="w-full grid gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div data-aos="fade-up">
             <TeamCard
               imageSrc="/images/team-1.webp"

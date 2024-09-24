@@ -10,8 +10,7 @@ interface Props {
 const TestimonialCard = ({ avatarSrc, company, name, testimony }: Props) => {
   return (
     <div className="w-full px-10 py-14 bg-light rounded-md select-none">
-
-      <div className="space-y-5 flex flex-col items-center text-center">
+      <div className="space-y-5 flex flex-row gap-6">
         <div className="relative w-fit">
           <Image
             src={avatarSrc}
@@ -20,25 +19,17 @@ const TestimonialCard = ({ avatarSrc, company, name, testimony }: Props) => {
             objectFit="contain"
             alt="avatar"
           />
-          <div className="absolute bottom-0 right-0">
-            <Image
-              src={'/images/quote-badge.svg'}
-              width={28}
-              height={28}
-              alt="quote badge"
-            />
-          </div>
         </div>
-        <div className="space-y-8">
-          <div className="space-y-2">
-            <Text value={name} textStyle="TestimonialName" />
-            <Text value={company} textStyle="TestimonialCompany" />
-          </div>
-          <Text value={testimony} textStyle="TestimonialDescription" />
+        <div className="space-y-2">
+          <Text value={name} textStyle="TestimonialName" />
+          <Text value={company} textStyle="TestimonialCompany" />
         </div>
       </div>
+      <div className="mt-4 ">
+        <Text value={testimony} textStyle="TestimonialDescription" />
+      </div>
     </div>
-  )
+  );
 }
 
 export default TestimonialCard

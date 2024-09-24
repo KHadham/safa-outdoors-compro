@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init({
-      duration: 600
+      duration: 250
     })
   }, [])
   return <Component {...pageProps} />

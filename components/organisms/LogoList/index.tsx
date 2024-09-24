@@ -1,14 +1,19 @@
-import LineDivider from 'components/atoms/LineDivider'
-import Image from 'next/image'
-import React from 'react'
+import LineDivider from "components/atoms/LineDivider";
+import Image from "next/image";
+import React from "react";
+import Text from "components/atoms/Text";
 
 const LogoList = () => {
   return (
     <>
-      <section className="py-8 m-0 flex flex-row flex-wrap place-items-center justify-around gap-4 md:gap-0 border-y border-borderLight" data-aos='fade-left'>
+      <Text value={"Produk tersedia"} textStyle={"SectionBadge"} />
+      <section
+        className="mt-6 flex flex-row flex-wrap place-items-center justify-around gap-4 md:gap-0 border-y border-borderLight bg-light px-6 py-8 w-full rounded-md "
+        data-aos="fade-up"
+      >
         <div className="">
           <Image
-            src={'/images/github-logo.svg'}
+            src={"/images/brand/eiger.svg"}
             width={120}
             height="36"
             alt="github logo"
@@ -16,7 +21,7 @@ const LogoList = () => {
         </div>
         <div className="">
           <Image
-            src={'/images/forbes-logo.svg'}
+            src={"/images/brand/arei.svg"}
             width={120}
             height="36"
             alt="forbes logo"
@@ -24,7 +29,7 @@ const LogoList = () => {
         </div>
         <div className="">
           <Image
-            src={'/images/google-logo.svg'}
+            src={"/images/brand/avtech.svg"}
             width={120}
             height="36"
             alt="google logo"
@@ -32,7 +37,7 @@ const LogoList = () => {
         </div>
         <div className="">
           <Image
-            src={'/images/microsoft-logo.svg'}
+            src={"/images/brand/consina.svg"}
             width={120}
             height="36"
             alt="microsoft logo"
@@ -40,7 +45,31 @@ const LogoList = () => {
         </div>
         <div className="">
           <Image
-            src={'/images/facebook-logo.svg'}
+            src={"/images/brand/deuter.svg"}
+            width={120}
+            height="36"
+            alt="facebook logo"
+          />
+        </div>
+        <div className="">
+          <Image
+            src={"/images/brand/lafuma.svg"}
+            width={120}
+            height="36"
+            alt="facebook logo"
+          />
+        </div>
+        <div className="">
+          <Image
+            src={"/images/brand/millet.svg"}
+            width={120}
+            height="36"
+            alt="facebook logo"
+          />
+        </div>
+        <div className="">
+          <Image
+            src={"/images/brand/fjallraven.svg"}
             width={120}
             height="36"
             alt="facebook logo"
@@ -48,7 +77,7 @@ const LogoList = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default LogoList
+export default LogoList;

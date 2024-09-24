@@ -9,7 +9,7 @@ interface PageTemplateProps {
   children: ReactNode[] | JSX.Element
   title?: string
 }
-const PageTemplate = ({ children, title = 'Collosal' }: PageTemplateProps) => {
+const PageTemplate = ({ children, title = 'Safa-Outdoor' }: PageTemplateProps) => {
   const browserName = useGetBrowserName()
   return (
     <>
@@ -44,9 +44,9 @@ const PageTemplate = ({ children, title = 'Collosal' }: PageTemplateProps) => {
         </div>
       ) : (
         <>
-          <div className="w-full h-fit min-h-screen bg-dark overflow-x-hidden">
-            <div className="w-full h-full min-h-screen relative bg-[url('/images/page-background.svg')] bg-cover">
-              <div className="w-full h-full min-h-screen relative backdrop-blur-[175px] bg-dark/[.80] overflow-visible">
+          <div className="w-full h-fit min-h-screen bg-primary overflow-x-hidden">
+            <div className="w-full h-full min-h-screen relative  bg-cover">
+              <div className="w-full h-full min-h-screen relative backdrop-blur-[175px] bg-dark/[.20] overflow-visible">
                 {/* Space for navbar, because navbar is absolute */}
                 <div className="h-[105px]"></div>
                 {/* Padding */}

@@ -6,6 +6,17 @@ module.exports = {
   presets: [],
   darkMode: 'media', // or 'class'
   theme: {
+    extend: {
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 15s linear infinite',
+      },
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -44,7 +55,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       cardDark: '#161629',
-      primary: '#6016FC',
+      primary: '#0a5fcf',
       dark: '#0B0B22',
       error: '#FC165B',
       badge: '#16FCD2',
@@ -53,7 +64,7 @@ module.exports = {
       light: '#ffffff0d',
       buttonLight: '#ffffff1a',
       borderLight: '#ffffff1a',
-      primaryLight: '#6016FC1a',
+      primaryLight: '#0a5fcf1a',
     }),
     columns: {
       auto: 'auto',
