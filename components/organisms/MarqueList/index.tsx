@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import Text from "components/atoms/Text";
 
 const LogoList = ({
@@ -19,22 +19,20 @@ const LogoList = ({
     <>
       <Text value={title} textStyle={"SectionBadge"} />
       <section
-        className=" mt-6 overflow-hidden  whitespace-nowrap flex-nowrap place-items-center justify-around gap-4 md:gap-0 border-y border-borderLight bg-light px-6 py-8 w-full rounded-md  "
+        className="mt-6 overflow-x-auto flex items-center gap-4 md:gap-6 border-y border-borderLight bg-light px-6 py-8 w-full rounded-md scrollbar-hide"
         data-aos="fade-up"
       >
-        <div className="animate-marquee space-x-10">
-          {data.concat(data).map((item, index) => {
-            return (
-              <div
-                key={index}
-                className={`rounded-full inline-block ${
-                  background ? "border-white p-1 bg-slate-100 border-2" : ""
-                }`}
-              >
-                <Image src={item} width={width} height={height} alt={item} />
-              </div>
-            );
-          })}
+        <div className="animate-marquee flex gap-x-10 min-w-max">
+          {data.concat(data).map((item, index) => (
+            <div
+              key={index}
+              className={`rounded-full ${
+                background ? "border-white p-1 bg-slate-100 border-2" : ""
+              }`}
+            >
+              <Image src={item} width={width} height={height} alt="logo" />
+            </div>
+          ))}
         </div>
       </section>
     </>

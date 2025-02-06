@@ -89,7 +89,7 @@ const Text = ({ value, textStyle }: TextProps) => {
       case 'ProjectDetailValue':
         return 'text-white font-semibold text-base leading-5.5'
       case 'SmallCardTitle':
-        return 'text-white font-semibold text-sm leading-5.5'
+        return 'text-white font-semibold text-sm leading-5.5 text-left'
       case 'SmallCardDescription':
         return 'text-muted font-normal text-sm leading-6'
       case 'FeatureCardTitle':

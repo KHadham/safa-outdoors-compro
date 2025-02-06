@@ -3,20 +3,46 @@ import NavBrand from "components/atoms/NavBrand";
 import NavLink from "components/atoms/NavLink";
 import ButtonLink from "components/atoms/Button/ButtonLink";
 import Container from "components/templates/Container";
-import { FiMenu, FiX, FiShoppingCart } from "react-icons/fi";
+import { FiMenu, FiX, FiUser } from "react-icons/fi";
 
 import useMobileDeviceDetection from "hooks/useMobileDetection";
+import { useAtom } from "jotai";
+import { cartAtom } from "states/cart";
+import { useAtomValue, useSetAtom } from "jotai";
+
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const isMobile = useMobileDeviceDetection();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [notificationCount, setNotificationCount] = useState<number>(0);
+  // const [cart, setCart] = useAtom<any>(cartAtom); // Use the cart atom
+  const cart = useAtomValue(cartAtom);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
       setIsLoggedIn(true);
     }
-  }, []);
+    // const storedCount = localStorage.getItem("cart");
+
+    // if (storedCount) {
+    //   const cart = JSON.parse(storedCount);
+
+    //   setNotificationCount(
+    //     cart.reduce(
+    //       (total: any, item: { quantity: any }) => total + (item.quantity || 0),
+    //       0
+    //     )
+    //   );
+    // }
+    console.log(
+      "cart",
+      cart.reduce(
+        (total: any, item: { quantity: any }) => total + (item.quantity || 0),
+        0
+      )
+    );
+  }, [cart]);
 
   useEffect(() => {
     if (isOpen) {
@@ -27,8 +53,7 @@ const NavBar = () => {
       document.body.classList.remove("overflow-y-hidden");
     }
   }, [isOpen]);
-  
-  
+
   return (
     <>
       <nav className={`pt-8 w-full top-0 left-0 z-30 fixed`}>
@@ -45,7 +70,22 @@ const NavBar = () => {
                       isMobile ? "cursor-default" : "cursor-pointer"
                     }`}
                   >
-                    {isOpen ? <FiX /> : <FiMenu />}
+                    {isOpen ? (
+                      <FiX />
+                    ) : (
+                      <div className="relative">
+                        <FiMenu />
+                        {/* {cart.length !== 0 && (
+                          <div className="absolute -bottom-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                            {cart.reduce(
+                              (total: any, item: { quantity: any }) =>
+                                total + (item.quantity || 0),
+                              0
+                            )}
+                          </div>
+                        )} */}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -54,46 +94,41 @@ const NavBar = () => {
                   isOpen ? "" : "hidden "
                 }space-y-5 mt-4 lg:mt-0 lg:space-y-0 lg:space-x-16 lg:flex lg:place-items-center`}
               >
-                <NavLink href="/comingsoon" value="Services" canActive={true} />
-                <NavLink href="/comingsoon" value="Sewa" canActive={true} />
+                <NavLink href="/sewa" value="Sewa" canActive={true} />
                 <NavLink href="/comingsoon" value="Trip" canActive={true} />
-                <NavLink href="/comingsoon" value="About" canActive={true} />
-              </div>
-              {/* <div className="flex flex-row gap-4">
+                <NavLink href="/about" value="About" canActive={true} />
                 <div
-                  className={`${isOpen ? "" : "hidden "}lg:block mt-5 lg:mt-0`}
+                  className={`${
+                    isOpen ? "" : "hidden "
+                  } lg:block lg:mt-0 flex flex-row gap-4 items-center `}
                 >
-                  <ButtonLink
-                    value={isLoggedIn ? "Logout" : "Login"}
-                    style="light"
-                    color="white"
-                    size="small"
-                    href="/contact"
-                  />
-                </div>
-                <div
-                  className={`${isOpen ? "" : "hidden "}lg:block mt-5 lg:mt-0`}
-                >
-                  <ButtonLink
-                    value={
-                      <div className="flex flex-row gap-4">
-                        <FiShoppingCart
-                          color="white"
-                          size={20}
-                          onClick={() =>
-                            alert("fitur masih dalam pengembangan")
-                          }
-                        />
-                        0
+                  <div className="relative">
+                    {isLoggedIn ? (
+                      <div className="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center">
+                        <FiUser className="text-white text-xl" />
                       </div>
-                    }
-                    style="light"
-                    color="white"
-                    size="small"
-                    href="/contact"
-                  />
+                    ) : (
+                      <ButtonLink
+                        value={"Login"}
+                        style="light"
+                        color="white"
+                        size="small"
+                        href="/contact" // You can change this to your login page route
+                      />
+                    )}
+                    {/* {cart.length !== 0 && (
+                    <div className="absolute -bottom-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                      {cart.reduce(
+                        (total: any, item: { quantity: any }) =>
+                          total + (item.quantity || 0),
+                        0
+                      )}
+                    </div>
+                  )} */}
+                  </div>
                 </div>
-              </div> */}
+              </div>
+              {/* avatar start */}
             </div>
           </div>
         </Container>

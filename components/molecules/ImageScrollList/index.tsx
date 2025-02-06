@@ -19,8 +19,8 @@ const LogoCarousel = ({ data }: { data: string[] }) => {
    };
 
   return (
-    <div className="w-[400px] relative overflow-hidden">
-      <PhotoProvider >
+    <div className="w-[350px] lg:w-[450px] lg:h-[450px] relative overflow-hidden">
+      <PhotoProvider>
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -30,10 +30,10 @@ const LogoCarousel = ({ data }: { data: string[] }) => {
               <PhotoView src={image}>
                 <Image
                   src={image}
-                  width={400}
-                  height={400}
+                  width={450}
+                  height={450}
                   alt={image}
-                  className="w-[400px] h-[400px] rounded-lg"
+                  className="w-[450px] h-[450px] rounded-lg"
                 />
               </PhotoView>
             </div>
