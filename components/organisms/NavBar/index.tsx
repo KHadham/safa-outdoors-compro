@@ -35,13 +35,13 @@ const NavBar = () => {
     //     )
     //   );
     // }
-    console.log(
-      "cart",
-      cart.reduce(
-        (total: any, item: { quantity: any }) => total + (item.quantity || 0),
-        0
-      )
-    );
+    // console.log(
+    //   "cart",
+    //   cart.reduce(
+    //     (total: any, item: { quantity: any }) => total + (item.quantity || 0),
+    //     0
+    //   )
+    // );
   }, [cart]);
 
   useEffect(() => {
