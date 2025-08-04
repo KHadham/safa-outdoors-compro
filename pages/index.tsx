@@ -50,7 +50,7 @@ const Home = () => {
               badge="Mempersembahkan"
             />
           </div>
-          <div className="w-fit gap-4 flex flex-row items-center">
+          <div className="w-fit gap-4 flex  flex-col md:flex-row items-center">
             <ButtonLink
               value="Youtube Channel"
               href="https://www.youtube.com/@JanganDirumahAjaYT"
