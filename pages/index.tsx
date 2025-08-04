@@ -50,6 +50,26 @@ const Home = () => {
               badge="Mempersembahkan"
             />
           </div>
+          <div className="w-fit gap-4 flex flex-row items-center">
+            <ButtonLink
+              value="Youtube Channel"
+              href="https://www.youtube.com/@JanganDirumahAjaYT"
+              color="white"
+              style="light"
+            />
+            <ButtonLink
+              value="Instagram Sewa"
+              href="https://www.instagram.com/safa_outdoors/"
+              color="white"
+              style="light"
+            />
+            <ButtonLink
+              value="Instagram Open Trip"
+              href="https://www.instagram.com/jangan_dirumahaja/"
+              color="white"
+              style="light"
+            />
+          </div>
         </section>
         {/* <MarqueList
           data={partnersList}
