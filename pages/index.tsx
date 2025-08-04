@@ -51,16 +51,12 @@ const Home = () => {
             />
           </div>
         </section>
-        <section
-          className="flex flex-col gap-10 items-center "
-          data-aos="fade-up"
-        ></section>
-        <MarqueList
+        {/* <MarqueList
           data={partnersList}
           background={true}
           title={"Berkerjasama dengan"}
         />
-        <MarqueList data={brandsList} title={"Brand tersedia"} />
+        <MarqueList data={brandsList} title={"Brand tersedia"} /> */}
         <LineDivider />
 
         <section className="grid place-items-center" data-aos="zoom-in-up">
