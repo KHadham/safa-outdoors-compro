@@ -8,12 +8,14 @@ const LogoList = ({
   width = 80,
   height = 80,
   title = "Berkerjasama dengan",
+  animate = true,
 }: {
   data: string[];
   background?: boolean;
   width?: number;
   height?: number;
   title?: string;
+  animate?: boolean;
 }) => {
   return (
     <>
@@ -22,7 +24,13 @@ const LogoList = ({
         className="mt-6 overflow-x-auto flex items-center gap-4 md:gap-6 border-y border-borderLight bg-light px-6 py-8 w-full rounded-md scrollbar-hide"
         data-aos="fade-up"
       >
-        <div className="animate-marquee flex gap-x-10 min-w-max">
+        <div
+          className={` ${
+            animate
+              ? "animate-marquee flex gap-x-10 min-w-max"
+              : "flex gap-x-10 min-w-max"
+          }`}
+        >
           {data.concat(data).map((item, index) => (
             <div
               key={index}

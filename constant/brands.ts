@@ -7,9 +7,9 @@ const List: string[] = [
   "/images/brand/Lafuma.svg",
   "/images/brand/Millet.svg",
   "/images/brand/Fjallraven.svg",
-  "/images/brand/reptil.png",
-  "/images/brand/merapi.png",
-  "/images/brand/tendaki.png",
-  "/images/brand/quenchua.webp",
+  "/images/brand/Reptil.png",
+  "/images/brand/Merapi.png",
+  "/images/brand/Tendaki.png",
+  "/images/brand/Quenchua.webp",
 ];
 export default List;

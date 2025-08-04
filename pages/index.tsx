@@ -25,6 +25,7 @@ import { MdElectricBolt } from "react-icons/md";
 import { GiKnifeFork } from "react-icons/gi";
 import Text from "components/atoms/Text";
 import { HiUserGroup } from "react-icons/hi";
+import Image from "next/image";
 
 const Home = () => {
   return (
@@ -43,13 +44,22 @@ const Home = () => {
         >
           <div className="w-10/12 md:w-8/12 text-center ">
             <PageSentence
-              title="One For All Outdooor Services"
+              withImage={true}
+              title="One For All Outdooor Services from"
               description="Mau sewa alat, mau beli alat, mau naik gunung, mau camping, mau treking, mau jalan-jalan, mau ke pantai, mau piknik, segala kebutuhan outdoor anda bisa di handle disini"
               badge="Mempersembahkan"
             />
           </div>
         </section>
-        {/* <MarqueList data={partnersList} background={true} /> */}
+        <section
+          className="flex flex-col gap-10 items-center "
+          data-aos="fade-up"
+        ></section>
+        <MarqueList
+          data={partnersList}
+          background={true}
+          title={"Berkerjasama dengan"}
+        />
         <MarqueList data={brandsList} title={"Brand tersedia"} />
         <LineDivider />
 
@@ -64,7 +74,6 @@ const Home = () => {
         <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
           <div className="text-center sm:w-10/12 lg:text-left lg:w-full gap-32">
             <ImageScrollList data={eventList} />
-          
           </div>
           <aside
             className="text-center sm:w-10/12 lg:text-left lg:w-full space-y-12"

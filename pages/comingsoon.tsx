@@ -1,7 +1,7 @@
-import ButtonLink from 'components/atoms/Button/ButtonLink'
-import PageSentence from 'components/molecules/PageSentence'
-import PageTemplate from 'components/templates/PageTemplate'
-import React from 'react'
+import ButtonLink from "components/atoms/Button/ButtonLink";
+import PageSentence from "components/molecules/PageSentence";
+import PageTemplate from "components/templates/PageTemplate";
+import React from "react";
 
 const PageNotFound = () => {
   return (
@@ -17,13 +17,19 @@ const PageNotFound = () => {
                 badge="Mohon bersabar"
                 badgeStyle="success"
                 title="Coming Soon"
-                description="Layanan ini masih dalam pengembangan, di tunggu aja tanggal mainnya ya"
+                description="Layanan ini masih dalam pengembangan, kalau mau booking Trip bisa langsung DM ke Instagram @jangan_dirumahaja"
               />
             </div>
-            <div className="w-fit">
+            <div className="w-fit gap-4 flex flex-row items-center">
               <ButtonLink
                 value="Back to Home"
                 href="/"
+                color="white"
+                style="light"
+              />
+              <ButtonLink
+                value="Open Trip"
+                href="https://www.instagram.com/jangan_dirumahaja/"
                 color="white"
                 style="light"
               />
@@ -33,6 +39,6 @@ const PageNotFound = () => {
       </PageTemplate>
     </>
   );
-}
+};
 
-export default PageNotFound
+export default PageNotFound;

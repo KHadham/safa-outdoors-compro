@@ -33,8 +33,10 @@ const About = () => {
         >
           <PageSentence
             badge="ABOUT"
-            title="Safa Outdoor apaan sih ?"
-            description={`TIGA DEWA ADVENTURE INDONESIA adalah perusahaan yang dimiliki sepenuhnya oleh Muhammad Rifqi Maulana, yang berdiri sejak 17 Agustus 2008 diinisiasi oleh beberapa anak mahasiswa pecinta alam universitas diponegoro. Tiga Dewa Adventure Indonesia mempunyai badan hukum dengan nama PT. TIGA DEWA NUSANTARA yang bergerak dalam industri pariwisata dengan bidang usaha Jasa Pramuwisata Open Trip / Private Trip, Jasa Biro Perjalanan Wisata, Jasa Agen Perjalanan Wisata, Konsultan Pariwisata, Penjualan Merchandise, Penyewaan Alat Outdoor dan Penyewaan Armada Pariwisata..`}
+            title="Safa Outdoor siapa sih ?"
+            description={`Sekumpulan orang orang yang sok idealis, mempelopori gerakan penolakan untuk tetap dan berdiam diri dirumahaja pada saat musim kopet 19 dulu, gemar berpetualang dan berkegiatan apapun yang berhubungan dengan aktivitas outdoor
+Keluyuran sana sini ,di pinggiran kota bahkan pedesaan jauh dari kota yang suntuk dan membosankan
+`}
           />
         </aside>
       </section>
@@ -64,14 +66,17 @@ const About = () => {
                 value="193"
               />
               <div className="w-full h-[1px] bg-borderLight md:w-[1px] lg:min-h-[65px]"></div>
-              <StatisticListItem icon={<TiMap />} label="Trip Bulan ini" value="21" />
-             
+              <StatisticListItem
+                icon={<TiMap />}
+                label="Trip Bulan ini"
+                value="21"
+              />
             </div>
           </div>
           <LogoList />
         </div>
       </section>
-      <section className="grid place-items-center gap-16">
+      {/* <section className="grid place-items-center gap-16">
         <div
           className="sm:w-10/12 md:w-8/12 lg:w-6/12 2xl:w-5/12 text-center"
           data-aos="zoom-in-up"
@@ -123,9 +128,9 @@ const About = () => {
               job="Project Manager"
               name="Annette Black"
             />
-          </div>
+          </div> 
         </div>
-      </section>
+      </section>*/}
     </PageTemplate>
   );
 };
