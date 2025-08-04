@@ -69,7 +69,7 @@ export const sleep = (ms: number) => {
   });
 };
 
-export const isObjectEmpty = (obj) => {
+export const isObjectEmpty = (obj: {}) => {
   return Object.keys(obj).length === 0;
 };
 
